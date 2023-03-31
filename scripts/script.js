@@ -122,7 +122,7 @@ const animationOnScroll = () => {
       ) {
         elem.classList.add("_active");
       } else {
-        elem.classList.remove("_active");
+        // elem.classList.remove("_active");
       }
     });
   };
