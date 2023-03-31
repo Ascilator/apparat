@@ -106,8 +106,7 @@ const animationOnScroll = () => {
   if (!elements.length) return;
 
   const animElements = () => {
-    console.log(1234);
-    elements.forEach((elem) => {
+    elements.forEach((elem, index) => {
       const animHeight = elem.offsetHeight;
       const animOffset = offset(elem).top;
       const animStart = 2;
@@ -118,20 +117,37 @@ const animationOnScroll = () => {
       }
 
       if (
-        scrollY > animOffset - animItemPoint &&
+        window.innerHeight > animOffset &&
         screenY < animOffset + animHeight
       ) {
         elem.classList.add("_active");
       } else {
-        // elem.classList.remove("_active");
+        elem.classList.remove("_active");
       }
     });
   };
 
-  document.body.addEventListener("scroll", () => {
-    console.log(1234);
+  window.addEventListener("scroll", () => {
     animElements();
   });
 };
 
+const changeBackground = () => {
+  const trigger = document.querySelector(".section-goods");
+  const trigger2 = document.querySelector(".hugong-brand");
+  const back = document.querySelector(".backgraound");
+
+  window.addEventListener("scroll", () => {
+    if (
+      offset(trigger).top - window.innerHeight / 2 < 0 &&
+      offset(trigger2).top - window.innerHeight > 0
+    ) {
+      back.classList.add("_active");
+    } else {
+      back.classList.remove("_active");
+    }
+  });
+};
+
+changeBackground();
 animationOnScroll();

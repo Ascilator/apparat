@@ -36,7 +36,6 @@ body {
   height: 100%;
   background-color: #fffdfa;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 button {
@@ -63,7 +62,6 @@ button {
   display: flex;
   flex-direction: column;
   width: 100%;
-  overflow-x: hidden;
 }
 
 /* container */
