@@ -33,9 +33,7 @@ body {
   font-size: 16px;
   font-family: "Inter", sans-serif;
   color: #000;
-  height: 100%;
   background-color: #fffdfa;
-  scroll-behavior: smooth;
 }
 
 button {
@@ -49,9 +47,6 @@ button {
   color: inherit;
   font: inherit;
   line-height: normal;
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none;
   outline: none;
 }
 

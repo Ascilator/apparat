@@ -93,7 +93,7 @@ textAnimation();
 const offset = (el) => {
   const rect = el.getBoundingClientRect(),
     scrollLeft = window.scrollX || document.documentElement.scrollLeft,
-    scrollTop = window.screenY || document.documentElement.scrollTop;
+    scrollTop = document.documentElement.scrollTop;
 
   return {
     top: rect.top + scrollTop,
@@ -116,9 +116,12 @@ const animationOnScroll = () => {
         animItemPoint = window.innerHeight - window.innerHeight / animStart;
       }
 
+      console.log(animOffset, scrollY);
+
       if (
-        window.innerHeight > animOffset &&
-        screenY < animOffset + animHeight
+        animOffset - scrollY - 0.8 * window.innerHeight <
+        0
+        // screenY < animOffset + animHeight
       ) {
         elem.classList.add("_active");
       } else {
@@ -138,9 +141,10 @@ const changeBackground = () => {
   const back = document.querySelector(".backgraound");
 
   window.addEventListener("scroll", () => {
+    console.log(offset(trigger2).top, scrollY);
     if (
-      offset(trigger).top - window.innerHeight / 2 < 0 &&
-      offset(trigger2).top - window.innerHeight > 0
+      offset(trigger).top - scrollY - window.innerHeight / 2 < 0 &&
+      offset(trigger2).top - scrollY - window.innerHeight / 2 > 0
     ) {
       back.classList.add("_active");
     } else {
