@@ -94,10 +94,6 @@ button {
   background-color: #fffdfa;
 }
 
-.header-nav__item.active {
-  opacity: 0.7;
-}
-
 .zero {
   display: none;
 }
@@ -145,11 +141,6 @@ button {
   font-size: 20px;
   line-height: 24.2px;
   font-weight: 600;
-  transition: opacity 0.2s linear;
-}
-.header-nav__item:hover {
-  opacity: 70%;
-  cursor: pointer;
 }
 
 .telephone {
@@ -310,25 +301,6 @@ button {
 }
 
 /* modal contact link */
-
-.modal-contacts__link {
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 900;
-  line-height: 18px;
-  letter-spacing: 0.05em;
-  text-align: center;
-  border: 2px solid #1a1a18;
-  border-radius: 5px;
-  width: 297px;
-  height: 40px;
-  padding: 11px 19px;
-  text-transform: uppercase;
-}
-
-.modal-contacts__link:hover {
-  color: #545454;
-}
 
 /* modal overlay  */
 
@@ -588,10 +560,6 @@ button {
   padding: 140px 0 250px;
 }
 
-.good-description {
-  max-width: 560px;
-}
-
 .item-title {
   font-family: Inter;
   font-size: 64px;
@@ -600,57 +568,6 @@ button {
   letter-spacing: 0em;
   text-align: left;
   margin-bottom: 40px;
-}
-
-/* Slick slider */
-.slick-slide {
-  height: 570px !important;
-  width: 570px !important;
-  pointer-events: all;
-}
-
-.slick-dots {
-  display: flex;
-  margin: -70px 200px 0 0;
-  align-items: center;
-  justify-content: center;
-  list-style-type: none;
-  pointer-events: all;
-  cursor: pointer;
-  position: relative;
-  z-index: 100;
-}
-
-.slick-dots li {
-  margin: 5px 0.25rem;
-}
-
-.slick-dots button {
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  padding: 0;
-
-  border: none;
-  border-radius: 50%;
-  background-color: #fff;
-  font-size: 0;
-}
-
-.slick-dots li.slick-active button {
-  background-color: transparent;
-  border: 1px solid #fff;
-}
-
-.item-img {
-  width: 570px;
-  height: 570px;
-}
-
-.item-img img {
-  object-fit: cover;
-  max-width: 100%;
-  max-height: 100%;
 }
 
 .item-subtitle {
@@ -699,10 +616,6 @@ button {
 .item-end a:hover {
   background-color: transparent;
   opacity: 0.7;
-}
-
-.reverse {
-  flex-direction: row-reverse;
 }
 
 /* section brand */
