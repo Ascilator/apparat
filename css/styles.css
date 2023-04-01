@@ -263,3 +263,7 @@ main {
   background: #fff;
   color: #1a1a18;
 }
+
+.item-end a {
+  white-space: nowrap;
+}

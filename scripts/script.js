@@ -116,8 +116,6 @@ const animationOnScroll = () => {
         animItemPoint = window.innerHeight - window.innerHeight / animStart;
       }
 
-      console.log(animOffset, scrollY);
-
       if (
         animOffset - scrollY - 0.8 * window.innerHeight <
         0
@@ -141,7 +139,6 @@ const changeBackground = () => {
   const back = document.querySelector(".backgraound");
 
   window.addEventListener("scroll", () => {
-    console.log(offset(trigger2).top, scrollY);
     if (
       offset(trigger).top - scrollY - window.innerHeight / 2 < 0 &&
       offset(trigger2).top - scrollY - window.innerHeight / 2 > 0
