@@ -267,3 +267,79 @@ main {
 .item-end a {
   white-space: nowrap;
 }
+
+.video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 201;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  transition: 1s;
+}
+.video video {
+  width: 40%;
+  transform: scale(2.5);
+  transition: 1s;
+}
+.video._active video {
+  transform: scale(1);
+}
+.video._ended video {
+  opacity: 0;
+}
+.video._ended_2 {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.section_intro__img {
+  flex: 0 1 635px;
+  height: 644px;
+  display: flex;
+  align-items: center;
+}
+.section_intro__img img {
+  width: 100%;
+}
+.section_intro__img .image1_cont {
+  margin-right: -130px;
+  position: relative;
+  z-index: 2;
+}
+.section_intro__img .image1_cont img {
+  transform: scale(3);
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier(0, 0, 0.51, 1.63);
+}
+.section_intro__img .image2_cont {
+  position: relative;
+  z-index: 2;
+}
+.section_intro__img .image2_cont img {
+  transform: scale(3);
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier(0, 0, 0.51, 1.63);
+}
+.section_intro__img._active .image1_cont {
+  z-index: 203;
+}
+.section_intro__img._active .image1_cont img {
+  transform: scale(1);
+}
+.section_intro__img._active_2 .image2_cont {
+  z-index: 202;
+}
+.section_intro__img._active_2 .image2_cont img {
+  transform: scale(1);
+}
+.section_intro__img._ended .image1_cont {
+  z-index: 3;
+}
+.section_intro__img._ended .image2_cont {
+  z-index: 2;
+}

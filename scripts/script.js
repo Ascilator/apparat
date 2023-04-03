@@ -88,8 +88,6 @@ const textAnimation = () => {
   });
 };
 
-textAnimation();
-
 const offset = (el) => {
   const rect = el.getBoundingClientRect(),
     scrollLeft = window.scrollX || document.documentElement.scrollLeft,
@@ -152,3 +150,36 @@ const changeBackground = () => {
 
 changeBackground();
 animationOnScroll();
+
+const videoAnimation = () => {
+  const videoContainer = document.querySelector(".video");
+  const video = document.querySelector(".video").querySelector("video");
+  const imagesContainer = document.querySelector(".section_intro__img");
+
+  video.src = "./img/video.mp4";
+  video.load();
+  video.play();
+  video.addEventListener("loadedmetadata", function () {
+    videoContainer.classList.add("_active");
+  });
+
+  video.addEventListener("ended", function () {
+    videoContainer.classList.add("_ended");
+    setTimeout(function () {
+      imagesContainer.classList.add("_active_2");
+    }, 500);
+    setTimeout(function () {
+      imagesContainer.classList.add("_active");
+    }, 1300);
+    setTimeout(function () {
+      videoContainer.classList.add("_ended_2");
+    }, 2600);
+    setTimeout(function () {
+      imagesContainer.classList.add("_ended");
+
+      textAnimation();
+    }, 3600);
+  });
+};
+
+videoAnimation();

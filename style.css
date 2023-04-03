@@ -78,7 +78,7 @@ button {
   position: fixed;
   top: 0;
   background-color: #fffdfa;
-  z-index: 2000;
+  z-index: 200;
 }
 /* dinamyc classes */
 .fixed {
