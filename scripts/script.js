@@ -150,14 +150,15 @@ const changeBackground = () => {
 
 const music = () => {
   let isPlaying = false;
-  const player = new Audio("../img/mus.mp3");
-  player.preload = "auto";
+  const audio = document.querySelector(".sound").querySelector("audio");
+  audio.src = "./img/mus.mp3";
+  audio.load();
 
   document.querySelector(".sound").addEventListener("click", () => {
     if (isPlaying) {
-      player.pause();
+      audio.pause();
     } else {
-      player.play();
+      audio.play();
     }
     document.querySelector(".sound").classList.toggle("_active");
     isPlaying = !isPlaying;
