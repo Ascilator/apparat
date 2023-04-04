@@ -381,8 +381,8 @@ button {
 .modal-callback {
   position: absolute;
   z-index: 3000;
-  bottom: 75px;
-  right: -100vw;
+  bottom: 110px;
+  right: -200vw;
   transition: 0.2s ease-in-out;
   background-color: #fffdfa;
   color: #1a1a18;

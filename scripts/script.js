@@ -209,7 +209,7 @@ const scrolling = () => {
 
     $([document.documentElement, document.body]).animate(
       {
-        scrollTop: $(block_id).offset().top - 200,
+        scrollTop: $(block_id).offset().top - 100,
       },
       200
     );
