@@ -50,71 +50,17 @@
                 </ul>
               </nav>
               <!-- /nav -->
-              <div class="telephone"> <a  href="tel:+375291768776">
-                <img src="./assets/img/telephone_header.png" alt="call-button">
-              </a> 
-            </div>
+              <div class="telephone"> 
+                <a  href="tel:+375291768776">
+                 <img src="./assets/img/telephone_header.png" alt="call-button">
+                </a>
+                <button class="popup_link" data-modal-target="#modal-contacts"></button> 
+              </div>
             <!-- /telephone -->
             </div>
           </div>
         <!-- modal contacts -->
-        <div class=" modal modal-contacts "  id="modal-contacts">
-          <div class="modal-contacts__phones" >
-        <!-- modal phones -->
-            <h2>КОНТАКТ-ЦЕНТР
-            </h2>
-            <button  data-close-button class="close-button__modal" >&times;</button>
-            <ul class="modal-phones__list" >
-              <li>
-                <p><a href="tel:+375173613094">+375 (17) 361-30-94</a> <span>многоканальный</span></p>
-              </li>
-              <li>
-                <p><a href="tel:+375173612382"> +375 (17) 361-23-82  </a> <span>многоканальный</span> </p>
-              </li>
-              <li>
-                <p><a href="tel:+375291768776">+375 (29) 176-87-76                               </a> <span>A1</span> </p>
-              </li>
-              <li>
-                <p><a href="tel:+375447877345">+375 (44) 787-73-45                              </a> <span>A1</span> </p>
-              </li>
-              <li>
-                <p><a href="tel:+375333206624">+375 (33) 320-66-24                         </a> <span>МТС</span></p>
-              </li>
-            </ul>
-          </div>
-          <!-- modal adress -->
-          <div class="modal-contacts__adress">
-            <div  class="modal-adress__title">
-              <p>ОФИС</p>
-              <p>СКЛАД</p>
-              <p>МАГАЗИН</p>
-            </div>
-            <div  class="modal-adress__list">
-              <p>Беларусь, 220014, г. Минск,</p>
-              <p>ул. Попова 26, офис 11 <a  style="cursor: pointer; text-decoration: underline;" target="_blank" href="https://mdfkl.by/contacts.html">Схема проезда</a> </p>
-            </div>
-          </div>
-          <!-- modal working time -->
-
-          <div class="modal-contacts__adress">
-            <div  class="modal-adress__title">
-              <p>
-                ВРЕМЯ РАБОТЫ</p>
-              
-            </div>
-            <div  class="modal-times__list">
-              <p>Понедельник - четверг: с 8.30 до 17.30</p>
-              <p>Пятница: с 8.30 до 16.15</p>
-              <p>Суббота - воскресенье: выходной</p>
-            </div>
-          </div>
-
-          <div> 
-            <a  class="modal-contacts__link" target="_blank" href="https://mdfkl.by/">Перерейти на основной сайт</a>
-          </div>
-          
-          <!-- /modal contacts  -->
-        </div>
+        
         <!-- /header container -->
         </div>
         <div id="overlay" ></div>
@@ -179,21 +125,82 @@
                   <!-- /callback button -->
 
                 </div>
+                <div class=" modal modal-contacts "  id="modal-contacts">
+                  <div class="modal-contacts__phones" >
+                <!-- modal phones -->
+                    <h2>КОНТАКТ-ЦЕНТР
+                    </h2>
+                    <button  data-close-button class="close-button__modal" >&times;</button>
+                    <ul class="modal-phones__list" >
+                      <li>
+                        <p><a href="tel:+375173613094">+375 (17) 361-30-94</a> <span>многоканальный</span></p>
+                      </li>
+                      <li>
+                        <p><a href="tel:+375173612382"> +375 (17) 361-23-82  </a> <span>многоканальный</span> </p>
+                      </li>
+                      <li>
+                        <p><a href="tel:+375291768776">+375 (29) 176-87-76                               </a> <span>A1</span> </p>
+                      </li>
+                      <li>
+                        <p><a href="tel:+375447877345">+375 (44) 787-73-45                              </a> <span>A1</span> </p>
+                      </li>
+                      <li>
+                        <p><a href="tel:+375333206624">+375 (33) 320-66-24                         </a> <span>МТС</span></p>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- modal adress -->
+                  <div class="modal-contacts__adress">
+                    <div  class="modal-adress__title">
+                      <p>ОФИС</p>
+                      <p>СКЛАД</p>
+                      <p>МАГАЗИН</p>
+                    </div>
+                    <div  class="modal-adress__list">
+                      <p>Беларусь, 220014, г. Минск,</p>
+                      <p>ул. Попова 26, офис 11 <a  style="cursor: pointer; text-decoration: underline;" target="_blank" href="https://mdfkl.by/contacts.html">Схема проезда</a> </p>
+                    </div>
+                  </div>
+                  <!-- modal working time -->
+        
+                  <div class="modal-contacts__adress">
+                    <div  class="modal-adress__title">
+                      <p>
+                        ВРЕМЯ РАБОТЫ</p>
+                      
+                    </div>
+                    <div  class="modal-times__list">
+                      <p>Понедельник - четверг: с 8.30 до 17.30</p>
+                      <p>Пятница: с 8.30 до 16.15</p>
+                      <p>Суббота - воскресенье: выходной</p>
+                    </div>
+                  </div>
+        
+                  <div> 
+                    <a  class="modal-contacts__link" target="_blank" href="https://mdfkl.by/">Перерейти на основной сайт</a>
+                  </div>
+                  
+                  <!-- /modal contacts  -->
+                </div>
+                <div  class="modal modal-callback" id="modal-callback" >
+                  <button  data-close-button class="close-button__modal" >&times;</button>
+                    <form  id="form" class="callback-form" action="https://formsubmit.co/alesmazurphotography@gmail.com" method="POST">
+                      <input type="hidden" name="_template" value="table">
+                      <input   type="text" name="name"  placeholder="Ваше Имя" required>
+                      <input type="tel" name="telephone"  placeholder="Номер телефона +375 (_ _) _ _  _ _  _ _" required>
+                      <button class="callback_button_form form-button__callback" type="submit"><p>Заказать </p>
+                        <p>звонок</p></button>
+                  </form>
+                </div>
               </div>
-
-              <!-- modal callback -->
-<div  class="modal modal-callback" id="modal-callback" >
-  <button  data-close-button class="close-button__modal" >&times;</button>
-  <form  id="form" class="callback-form" action="https://formsubmit.co/alesmazurphotography@gmail.com" method="POST">
-    <input type="hidden" name="_template" value="table">
-    <input   type="text" name="name"  placeholder="Ваше Имя" required>
-    <input type="tel" name="telephone"  placeholder="Номер телефона +375 (_ _) _ _  _ _  _ _" required>
-    <button class="callback_button_form form-button__callback" type="submit"><p>Заказать </p>
-      <p>звонок</p></button>
-</form>
-</div>
-
-              <!-- /modal callback -->
+              <div class="sound _active">
+                <div class="on">
+                  <img src="img/sound_on.svg" alt="">
+                </div>
+                <div class="off">
+                  <img src="img/sound_off.svg" alt="">
+                </div>
+              </div>
             </section>
             <!-- /section intro -->
             <!-- section list -->
@@ -575,7 +582,12 @@
                   </div>
                   <div class="about-brand__content">
                     <div class="brand-content__text">Hugong - крупнейший производитель оборудования для сварки и резки металла. Заводы основаны более 60 лет назад. Компания Hugong обладает богатым опытом, передовыми технологиями и производственными возможностями  и в настоящее время занимает наибольшую долю рынка в своей области.</div>
-                    <div class="brand-content__img"><img src="./assets/img/map-1.png" alt=""></div>
+                    <div class="brand-content__img">
+                      <img src="./assets/img/map-1.png" alt="">
+                      <div class="animation">
+                        <img src="img/wave.svg" alt="">
+                      </div>
+                    </div>
                   </div>
 <div class="about-brand__end">С момента своего основания в 1958 году компания Hugong завоевала прочную репутацию производителя <br> качественного сварочного оборудования и сосредоточилась на внедрении и продвижении инноваций <br> и разработке продуктов с помощью самых современных технологий. 
   <br><br>
@@ -613,7 +625,12 @@
 
 
                       У нас можно не только приобрести сертифицированный товар, но и получить квалифицированные рекомендации относительно выбора и эксплуатации сварочного оборудования и материалов. </div>
-                    <div class="brand-content__img map-2"><img src="./assets/img/Group 25.png" alt=""></div>
+                    <div class="brand-content__img map-2">
+                      <img src="./assets/img/Group 25.png" alt="">
+                      <div class="animation">
+                        <img src="img/wave.svg" alt="">
+                      </div>
+                    </div>
                   </div>
 <div class="about-brand__end"> <p>
 

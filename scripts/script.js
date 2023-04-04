@@ -148,8 +148,25 @@ const changeBackground = () => {
   });
 };
 
+const music = () => {
+  let isPlaying = false;
+  const player = new Audio("../img/mus.mp3");
+  player.preload = "auto";
+
+  document.querySelector(".sound").addEventListener("click", () => {
+    if (isPlaying) {
+      player.pause();
+    } else {
+      player.play();
+    }
+    document.querySelector(".sound").classList.toggle("_active");
+    isPlaying = !isPlaying;
+  });
+};
+
 changeBackground();
 animationOnScroll();
+music();
 
 const videoAnimation = () => {
   const videoContainer = document.querySelector(".video");
