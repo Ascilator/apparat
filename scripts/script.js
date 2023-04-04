@@ -201,3 +201,19 @@ const videoAnimation = () => {
 };
 
 videoAnimation();
+
+const scrolling = () => {
+  $(".header-nav__item").click(function () {
+    const block_id = $(this).attr("data-scroll");
+    if (!block_id) return;
+
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $(block_id).offset().top - 200,
+      },
+      200
+    );
+  });
+};
+
+scrolling();

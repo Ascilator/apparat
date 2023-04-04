@@ -126,6 +126,7 @@ button {
 .header-nav {
   display: flex;
   align-items: center;
+  gap: 20px;
   justify-content: space-around;
   width: 100%;
   padding: 0px 0px 8px;
@@ -136,6 +137,7 @@ button {
   font-size: 20px;
   line-height: 24.2px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .telephone {
@@ -161,9 +163,9 @@ button {
   font-weight: 600;
   line-height: 32px;
   letter-spacing: 0em;
-  position: absolute;
-  top: 0%;
-  right: -100vw;
+  position: fixed;
+  top: 100px;
+  right: -200vw;
   transition: 0.2s ease-in-out;
   z-index: 2000;
   background-color: #fffdfa;
@@ -172,7 +174,7 @@ button {
 }
 
 .modal-contacts.active {
-  right: 0%;
+  right: calc((100vw - 1270px) / 2);
 }
 
 .modal-contacts h2,
@@ -343,7 +345,6 @@ button {
   font-weight: 400;
   line-height: 41px;
   letter-spacing: 0em;
-  text-align: left;
 }
 
 .section-intro__text h3 {
@@ -352,7 +353,6 @@ button {
   font-weight: 400;
   line-height: 23px;
   letter-spacing: 0em;
-  text-align: left;
 }
 
 .section-intro__text h4 {
@@ -528,6 +528,17 @@ button {
 .liders-nav__item:nth-child(8):hover ~ .section-list__images img:nth-child(8),
 .liders-nav__item:nth-child(9):hover ~ .section-list__images img:nth-child(9) {
   opacity: 1;
+}
+
+.liders-nav__item:nth-child(2):hover ~ .section-list__images img:nth-child(1),
+.liders-nav__item:nth-child(3):hover ~ .section-list__images img:nth-child(1),
+.liders-nav__item:nth-child(4):hover ~ .section-list__images img:nth-child(1),
+.liders-nav__item:nth-child(5):hover ~ .section-list__images img:nth-child(1),
+.liders-nav__item:nth-child(6):hover ~ .section-list__images img:nth-child(1),
+.liders-nav__item:nth-child(7):hover ~ .section-list__images img:nth-child(1),
+.liders-nav__item:nth-child(8):hover ~ .section-list__images img:nth-child(1),
+.liders-nav__item:nth-child(9):hover ~ .section-list__images img:nth-child(1) {
+  opacity: 0;
 }
 
 /* section-goods */
