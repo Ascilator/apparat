@@ -202,8 +202,8 @@ const videoAnimation = () => {
 
 videoAnimation();
 
-const scrolling = () => {
-  $(".header-nav__item").click(function () {
+const scrolling = (selector = ".header-nav__item", cb) => {
+  $(selector).click(function () {
     const block_id = $(this).attr("data-scroll");
     if (!block_id) return;
 
@@ -213,7 +213,29 @@ const scrolling = () => {
       },
       200
     );
+    cb();
   });
 };
 
 scrolling();
+
+const burger = () => {
+  document.querySelector(".burger").addEventListener("click", function () {
+    document.querySelector(".mobile_menu").classList.add("_active");
+    document.querySelector(".overlay_black").classList.add("_active");
+  });
+
+  document
+    .querySelector(".overlay_black")
+    .addEventListener("click", function () {
+      document.querySelector(".mobile_menu").classList.remove("_active");
+      document.querySelector(".overlay_black").classList.remove("_active");
+    });
+
+  scrolling(".menu_item", () => {
+    document.querySelector(".mobile_menu").classList.remove("_active");
+    document.querySelector(".overlay_black").classList.remove("_active");
+  });
+};
+
+burger();

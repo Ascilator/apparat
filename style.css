@@ -696,19 +696,17 @@ button {
   width: 100%;
   background-color: #1a1a18;
   color: #fffdfa;
-  height: 88px;
+  padding: 24px 0;
 }
 
 .container-footer__inner {
   margin: auto;
   width: 100%;
-  height: 88px;
 }
 
 .footer-content {
   display: flex;
   margin: 0 auto;
-  height: 88px;
   align-items: center;
   justify-content: space-between;
 }
