@@ -1073,13 +1073,19 @@ li.footer-nav__item a {
 .footer .upper .left_part {
   flex: 0 1 543px;
 }
+.footer .upper .left_part .go_main_btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
 .footer .upper .left_part .go_main_btn a {
+  margin-bottom: 20px;
   padding: 8px 20px;
   background: #1a1a18;
   border: 2px solid #fffdfa;
   border-radius: 5px;
   display: inline-block;
-  margin-bottom: 50px;
   font-weight: 900;
   font-size: 14px;
   text-align: center;
