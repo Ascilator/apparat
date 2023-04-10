@@ -1128,6 +1128,11 @@ li.footer-nav__item {
           &:hover {
             background: #fff2;
           }
+          &:first-child {
+            @media screen and (max-width: 500px) {
+              display: none;
+            }
+          }
         }
       }
       .banks_logos {

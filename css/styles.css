@@ -1099,6 +1099,11 @@ li.footer-nav__item a {
 .footer .upper .left_part .go_main_btn a:hover {
   background: rgba(255, 255, 255, 0.1333333333);
 }
+@media screen and (max-width: 500px) {
+  .footer .upper .left_part .go_main_btn a:first-child {
+    display: none;
+  }
+}
 .footer .upper .left_part .banks_logos {
   display: flex;
   align-items: stretch;
