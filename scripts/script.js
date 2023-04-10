@@ -67,6 +67,12 @@ const doAfter = (el, func, dur) => {
   //
 };
 
+const isMobile = () => {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+    navigator.userAgent
+  );
+};
+
 const textAnimation = () => {
   document.querySelector(".intro-logo").classList.add("_active");
   const init = document.querySelector(".intro-logo");
@@ -169,10 +175,33 @@ changeBackground();
 animationOnScroll();
 music();
 
+const afterVideoAnimation = (videoContainer, imagesContainer) => {
+  videoContainer.classList.add("_ended");
+  setTimeout(function () {
+    imagesContainer.classList.add("_active_2");
+  }, 500);
+  setTimeout(function () {
+    imagesContainer.classList.add("_active");
+  }, 1300);
+  setTimeout(function () {
+    videoContainer.classList.add("_ended_2");
+  }, 2600);
+  setTimeout(function () {
+    imagesContainer.classList.add("_ended");
+
+    textAnimation();
+  }, 3600);
+};
+
 const videoAnimation = () => {
   const videoContainer = document.querySelector(".video");
   const video = document.querySelector(".video").querySelector("video");
   const imagesContainer = document.querySelector(".section_intro__img");
+
+  if (isMobile()) {
+    afterVideoAnimation(videoContainer, imagesContainer);
+    return;
+  }
 
   video.src = "./img/video.mp4";
   video.load();
@@ -182,21 +211,7 @@ const videoAnimation = () => {
   });
 
   video.addEventListener("ended", function () {
-    videoContainer.classList.add("_ended");
-    setTimeout(function () {
-      imagesContainer.classList.add("_active_2");
-    }, 500);
-    setTimeout(function () {
-      imagesContainer.classList.add("_active");
-    }, 1300);
-    setTimeout(function () {
-      videoContainer.classList.add("_ended_2");
-    }, 2600);
-    setTimeout(function () {
-      imagesContainer.classList.add("_ended");
-
-      textAnimation();
-    }, 3600);
+    afterVideoAnimation(videoContainer, imagesContainer);
   });
 };
 

@@ -707,6 +707,42 @@ main {
             }
           }
           .item-end {
+            .price {
+              width: 140px;
+              height: 140px;
+              background: #f4902b;
+              border: 2px solid #fffdfa;
+              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              border-radius: 50%;
+
+              @media screen and (max-width: 850px) {
+                display: none;
+              }
+            }
+            .digits {
+              font-weight: 900;
+              font-size: 24px;
+              line-height: 125%;
+              text-transform: uppercase;
+              color: #fffdfa;
+            }
+            .curr {
+              font-weight: 900;
+              font-size: 12px;
+              line-height: 125%;
+              color: #fffdfa;
+            }
+            .ndc {
+              font-weight: 900;
+              font-size: 21px;
+              line-height: 125%;
+              color: #fffdfa;
+            }
+
             img {
               @media screen and (max-width: 850px) {
                 display: none;
@@ -741,6 +777,11 @@ main {
           }
           @media screen and (max-width: 850px) {
             display: block;
+          }
+        }
+        &.reverse {
+          @media screen and (max-width: 850px) {
+            flex: unset;
           }
         }
       }
@@ -1048,5 +1089,139 @@ li.footer-nav__item {
   &._active {
     opacity: 1;
     visibility: visible;
+  }
+}
+
+.footer {
+  .container {
+  }
+  .upper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 40px;
+    .left_part {
+      flex: 0 1 543px;
+      .go_main_btn {
+        a {
+          padding: 8px 20px;
+          background: #1a1a18;
+          border: 2px solid #fffdfa;
+          border-radius: 5px;
+          display: inline-block;
+          margin-bottom: 50px;
+          font-weight: 900;
+          font-size: 14px;
+          text-align: center;
+          letter-spacing: 0.05em;
+          text-transform: uppercase;
+          color: #fffdfa;
+          &:hover {
+            background: #fff2;
+          }
+        }
+      }
+      .banks_logos {
+        display: flex;
+        align-items: stretch;
+        gap: 25px;
+        img {
+          flex: 0 1 87px;
+          width: 100%;
+        }
+        @media screen and (max-width: 1000px) {
+          justify-content: center;
+        }
+      }
+      @media screen and (max-width: 1000px) {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+    }
+    .right_part {
+      flex: 0 1 526px;
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba(255, 253, 250, 0.5);
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @media screen and (max-width: 1000px) {
+          text-align: center;
+        }
+        @media screen and (max-width: 500px) {
+          font-size: 12px;
+        }
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      display: block;
+    }
+  }
+  .lower {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    .left_part {
+      .big_note {
+        font-weight: 400;
+        font-size: 32.4308px;
+        line-height: 150%;
+        color: #fffdfa;
+
+        @media screen and (max-width: 500px) {
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+      }
+      .small_note {
+        font-weight: 400;
+        font-size: 15.8907px;
+        line-height: 150%;
+        color: #fffdfa;
+        @media screen and (max-width: 500px) {
+          margin-bottom: 10px;
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        text-align: center;
+      }
+    }
+    .right_part {
+      .copyright {
+        font-weight: 400;
+        font-size: 24.2534px;
+        line-height: 150%;
+        color: rgba(255, 253, 250, 0.5);
+        @media screen and (max-width: 500px) {
+          font-size: 16px;
+        }
+      }
+      .disigned {
+        text-align: right;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba(255, 253, 250, 0.5);
+        @media screen and (max-width: 1200px) {
+          text-align: center;
+        }
+        @media screen and (max-width: 500px) {
+          font-size: 12px;
+        }
+      }
+      @media screen and (max-width: 1200px) {
+        text-align: center;
+      }
+    }
+    @media screen and (max-width: 1200px) {
+      display: block;
+    }
   }
 }
