@@ -1079,7 +1079,7 @@ li.footer-nav__item a {
 .footer .upper .left_part .go_main_btn {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 30px;
 }
 .footer .upper .left_part .go_main_btn a {
@@ -1102,6 +1102,11 @@ li.footer-nav__item a {
 @media screen and (max-width: 500px) {
   .footer .upper .left_part .go_main_btn a:first-child {
     display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footer .upper .left_part .go_main_btn {
+    align-items: center;
   }
 }
 .footer .upper .left_part .banks_logos {
