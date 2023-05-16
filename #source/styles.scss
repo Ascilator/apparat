@@ -1116,7 +1116,7 @@ li.footer-nav__item {
   }
   .upper {
     display: flex;
-    align-items: flex-end;
+    align-items: stretch;
     justify-content: space-between;
     gap: 20px;
     padding-top: 40px;
@@ -1175,6 +1175,9 @@ li.footer-nav__item {
     }
     .right_part {
       flex: 0 1 526px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       p {
         font-weight: 400;
         font-size: 16px;
@@ -1368,7 +1371,7 @@ li.footer-nav__item {
     overflow: hidden;
     .container {
       display: block;
-      padding: 20px;
+      padding: 30px 20px 20px;
     }
   }
   .container {

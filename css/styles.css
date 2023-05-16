@@ -1082,7 +1082,7 @@ li.footer-nav__item a {
 
 .footer .upper {
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
   justify-content: space-between;
   gap: 20px;
   padding-top: 40px;
@@ -1147,6 +1147,9 @@ li.footer-nav__item a {
 }
 .footer .upper .right_part {
   flex: 0 1 526px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .footer .upper .right_part p {
   font-weight: 400;
@@ -1363,7 +1366,7 @@ li.footer-nav__item a {
 }
 .orange_part._footer .container {
   display: block;
-  padding: 20px;
+  padding: 30px 20px 20px;
 }
 .orange_part .container {
   display: flex;
