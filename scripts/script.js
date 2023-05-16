@@ -262,9 +262,9 @@ function scroller() {
   document.querySelector(".scroller").addEventListener("click", function () {
     $("html, body").animate(
       {
-        scrollTop: 0,
+        scrollTop: $("#brand-hugong").offset().top - 200,
       },
-      800
+      1400
     );
   });
 }
