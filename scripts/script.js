@@ -250,25 +250,4 @@ const burger = () => {
   });
 };
 
-function scroller() {
-  window.addEventListener("scroll", (e) => {
-    if (scrollY > 100) {
-      document.querySelector(".scroller").classList.add("_active");
-    } else {
-      document.querySelector(".scroller").classList.remove("_active");
-    }
-  });
-
-  document.querySelector(".scroller").addEventListener("click", function () {
-    $("html, body").animate(
-      {
-        scrollTop: $("#brand-hugong").offset().top - 200,
-      },
-      1400
-    );
-  });
-}
-
 burger();
-
-scroller();
